@@ -4,6 +4,7 @@
         "iomanip": "cpp",
         "numbers": "cpp",
         "string": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "random": "cpp"
     }
 }
