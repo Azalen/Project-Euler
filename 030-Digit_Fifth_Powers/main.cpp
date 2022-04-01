@@ -5,7 +5,6 @@
 using namespace std;
 
 const bool  DEBUG   = false;
-const int   SIZE    = 150000;
 
 int main(){
     
