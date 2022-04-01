@@ -9,6 +9,7 @@ const int   SIZE    = 150000;
 int main(){
     
     clock_t start = clock();
+    int amountUniqueComputations = 0;
 
     int totalCoinSum = 200;
     int r = 200;
@@ -25,6 +26,7 @@ int main(){
                             for(int g = f; g >= 0; g = g - coins[1]){
                                 // no 8th for-loop cause 200x 1cent is only 1 solution
                                 anz++;
+                                amountUniqueComputations++;
                             }
                         }
                     }
@@ -39,5 +41,6 @@ int main(){
     clock_t end = clock();
     double runtime = (end - start)*1000000 / CLOCKS_PER_SEC ;
     cout << "runtime: " << runtime << "ns" << endl;
+    cout << "unique Computations: " << amountUniqueComputations << endl;
     return 0;
 }

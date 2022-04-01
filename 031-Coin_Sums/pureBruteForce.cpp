@@ -9,6 +9,7 @@ const int   SIZE    = 150000;
 int main(){
     
     clock_t start = clock();
+    int amountUniqueComputations = 0;
 
     int totalCoinSum = 200;
     int coins[8] = {1,2,5,10,20,50,100,200};
@@ -27,6 +28,7 @@ int main(){
                                         // korrekte Combo
                                         anz++;
                                     }
+                                    amountUniqueComputations++;
 
                                 }
                             }
@@ -41,5 +43,6 @@ int main(){
     clock_t end = clock();
     double runtime = (end - start)*1000 / CLOCKS_PER_SEC ;
     cout << "runtime: " << runtime << "ms" << endl;
+    cout << "unique Computations: " << amountUniqueComputations << endl;
     return 0;
 }
