@@ -1,12 +1,26 @@
 #include <iostream>
 #include <ctime>
 #include <string>
-#include "../utility/sieveOfEratosthenes.cpp"
+#include "../../utility/sieveOfEratosthenes.cpp"
+#include <cmath>
 
 using namespace std;
 
 const bool  DEBUG   = false;
 const int   SIZE    = 1000000;
+
+int reverse(int number){
+    int rev = 0;
+    int remainder = 0;
+    
+    while(number != 0){
+        remainder = number % 10;
+        rev = rev * 10 + remainder;
+        number /= 10;
+    }
+
+    return rev;
+}
 
 bool isTruncatableLeftToRight(int number, set<int> & primes){
     do{
