@@ -30,11 +30,26 @@ int main(){
     unsigned long long sol = 1;
     unsigned long long errorSol = 1;
 
-
     for(int j=1; j<(k+1); j++){
         sol      = (sol * (n+1-j))/j;           // DANGER !! ALL sol steps are natural but only if you do the division last
         errorSol = errorSol * ((n+1-j)/j);      
     }
+
+    /**     WHY ARE ALL STEPS OF sol NATURAL?
+     * 
+     *      because the enumerator always only is 1 less in each step
+     * 
+     *          if j = 2 you have two numbers next to each other
+     *          -> one of those MUST be divisible by 2 = 2nd denominator
+     * 
+     *          if j = 3 you have three numbers next to each other
+     *          -> one of those MUST be divisible by 3 = 3rd denominator
+     * 
+     *      and so on ..
+     *      However we dont know which enumerator is divisible by the j-th denominator
+     *      we only know that one of the j-enumerators MUST be divisble by it
+     * */
+
     cout << setw(30) << "with combinatorics: " <<  "#paths = " << sol << endl;
     cout << setw(30) << "wrong combinatorics: " <<  "#paths = " << errorSol << endl;
 
