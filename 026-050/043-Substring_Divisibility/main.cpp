@@ -135,7 +135,8 @@ int main(){
      * 
      *          => we need a way to compute the next permutation
      *          => lexicografic permutation algorithm 
-     *             (see https://www.nayuki.io/page/next-lexicographical-permutation-algorithm)
+     *                  see https://www.nayuki.io/page/next-lexicographical-permutation-algorithm
+     *                  or  E. W. Dijkstra, A Discipline of Programming, page 71
      * 
      * */
 
