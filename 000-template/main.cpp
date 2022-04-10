@@ -10,7 +10,7 @@ int main(){
     
     long long loopRuns = 0;
     clock_t start = clock();
-    
+
 
     clock_t end = clock();
     double runtime = (end - start)*1000 / CLOCKS_PER_SEC ;
